@@ -24,15 +24,16 @@ function fetchAndDisplayGif(event) {
                 setGifLoadedStatus(false);
             }
         });
-        $("#feedback").text("Loading...");
         setGifLoadedStatus(false);
+        $("#feedback").text("Loading...");
         }
         else {
-            $("#feedback").text("Are you a robot?");
             setGifLoadedStatus(false);
+            $("#feedback").text("Are you a robot?");
         }
 }
     function setGifLoadedStatus(isCurrentlyLoaded) {
         $("#gif").attr("hidden", !isCurrentlyLoaded);
         $("#feedback").attr("hidden", isCurrentlyLoaded);
 }
+})
